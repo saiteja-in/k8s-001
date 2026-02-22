@@ -8,3 +8,8 @@ spec:
   containers:
   - name: minifeed-worker
     image: saiteja13/mini-feed-worker
+    env:
+      - name: REDIS_URL
+        value: "redis://redis:6379"
+      - name: DATABASE_URL
+        value: "postgresql://postgres:root@db:5432/minifeed"

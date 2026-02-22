@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reader-api
+  labels:
+    app: reader-api
+spec:
+  containers:
+  - name: reader-api
+    image: saiteja13/mini-feed-reader-api
+    env:
+      - name: DATABASE_URL
+        value: "postgresql://postgres:root@db:5432/minifeed"
+    ports:
+      - containerPort: 5000
