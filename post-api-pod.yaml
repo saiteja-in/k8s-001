@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: post-api
-    image: saiteja13/mini-feed-post-api
+    image: saiteja13/mini-feed-post-api:v1
     env:
       - name: REDIS_URL
         value: "redis://redis:6379"

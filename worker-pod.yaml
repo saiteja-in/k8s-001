@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: minifeed-worker
-    image: saiteja13/mini-feed-worker
+    image: saiteja13/mini-feed-worker:v1
     env:
       - name: REDIS_URL
         value: "redis://redis:6379"

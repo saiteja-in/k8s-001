@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: reader-api
-    image: saiteja13/mini-feed-reader-api
+    image: saiteja13/mini-feed-reader-api:v1
     env:
       - name: DATABASE_URL
         value: "postgresql://postgres:root@db:5432/minifeed"
