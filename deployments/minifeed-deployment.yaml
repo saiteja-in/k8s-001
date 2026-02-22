@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minifeed
+  labels:
+    app: minifeed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minifeed
+  template:
+    metadata:
+      name: minifeed
+      labels:
+        app: minifeed
+    spec:
+      containers:
+      - name: minifeed
+        image: saiteja13/mini-feed-writer-react:v2
+        ports:
+          - containerPort: 3000

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reader-api
+  labels:
+    app: reader-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reader-api
+  template:
+    metadata:
+      labels:
+        app: reader-api
+    spec:
+      containers:
+      - name: reader-api
+        image: saiteja13/mini-feed-reader-api:v1
+        env:
+          - name: DATABASE_URL
+            value: "postgresql://postgres:root@db:5432/minifeed"
+        ports:
+          - containerPort: 5000

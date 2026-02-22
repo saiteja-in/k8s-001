@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minifeed-result
+  labels:
+    app: minifeed-result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minifeed-result
+  template:
+    metadata:
+      name: minifeed-result
+      labels:
+        app: minifeed-result
+    spec:
+      containers:
+      - name: minifeed-result
+        image: saiteja13/mini-feed-reader-angular:v3
+        ports:
+          - containerPort: 4200
