@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: minifeed-result
-    image: saiteja13/mini-feed-reader-angular:v1
+    image: saiteja13/mini-feed-reader-angular:v3
     ports:
       - containerPort: 4200
         name: minifeed-result
