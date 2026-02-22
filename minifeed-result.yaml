@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: minifeed-result
+  labels:
+    app: minifeed-result
+spec:
+  containers:
+  - name: minifeed-result
+    image: saiteja13/mini-feed-reader-angular
+    ports:
+      - containerPort: 4200
+        name: minifeed-result

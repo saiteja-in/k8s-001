@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: minifeed
+  labels:
+    app: minifeed
+spec:
+  containers:
+  - name: minifeed
+    image: saiteja13/mini-feed-writer-react
+    ports:
+      - containerPort: 3000
+        name: minifeed

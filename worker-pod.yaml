@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: minifeed-worker
+  labels:
+    app: minifeed-worker
+spec:
+  containers:
+  - name: minifeed-worker
+    image: saiteja13/mini-feed-worker
