@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: minifeed-result
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: minifeed-result
   ports:
     - port: 4200
       targetPort: 4200
-      nodePort: 31003

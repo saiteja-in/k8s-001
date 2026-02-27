@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: minifeed-web
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: minifeed
   ports:
     - port: 3000
       targetPort: 3000
-      nodePort: 31002

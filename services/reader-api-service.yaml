@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: reader-api
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: reader-api
   ports:
     - port: 5000
       targetPort: 5000
-      nodePort: 31001

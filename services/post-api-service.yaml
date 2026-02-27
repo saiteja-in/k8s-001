@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: post-api
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: post-api
   ports:
     - port: 4000
       targetPort: 4000
-      nodePort: 31000
